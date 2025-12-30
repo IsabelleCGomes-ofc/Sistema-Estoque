@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id": 1,
+        "nome": "computador",
+        "quantidade": 16,
+        "preco": 1200.0
+    },
+    {
+        "id": 2,
+        "nome": "estojo",
+        "quantidade": 30,
+        "preco": 17.0
+    },
+    {
+        "id": 3,
+        "nome": "b\u00edblia",
+        "quantidade": 150,
+        "preco": 20.0
+    }
+]
