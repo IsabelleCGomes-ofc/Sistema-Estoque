@@ -32,6 +32,9 @@ Sistema-Estoque/
 ├── utils.py # Funções utilitárias (limpar tela, pausa)
 ├── data.py # Manipulação do arquivo JSON
 ├── cadastro.py # Cadastro de produtos
+├── validacoes.py # Validações de entrada
+├── gerenciamentoProdutos.py # Ações com produtos já existentes
+
 
 ## ⚙️ Funcionalidades
 
@@ -76,10 +79,11 @@ Esse comportamento segue o padrão utilizado em sistemas reais e bancos de dados
 
 1. Certifique-se de ter o Python 3 instalado
 2. Clone ou baixe o repositório
-3. Execute no terminal:
+4. Execute no terminal(ou pyCharm, mas não há erros de manutenção e exibição):
 
 ```bash
 python main.py
 ├── gerenciamentoProdutos.py # Listar, remover e movimentar produtos
 ├── estoque.json # Arquivo de dados (gerado automaticamente)
 └── README.md # Documentação do projeto
+
