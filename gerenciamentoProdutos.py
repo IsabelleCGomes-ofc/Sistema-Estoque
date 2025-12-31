@@ -1,7 +1,26 @@
 from utils import limpar_tela
-from data import  carregarEstoque, salvarProduto
-from validacoes import encontrarProduto, validarInteiro, validarID
+from data import  *
+from validacoes import *
 
+#----------------------cadastrar------------------------------------------------------------------
+def cadastrarProduto():
+    limpar_tela()
+
+    estoque = carregarEstoque()
+    novoID = gerarId(estoque)
+    nome = validarTexto()
+    quantidade = validarInteiro()
+    preco = validarReal()
+
+    produto = {
+            "id": novoID,
+            "nome": nome,
+            "quantidade": quantidade,
+            "preco": preco
+    }
+
+    estoque.append(produto)
+    salvarProduto(estoque)
 #--------------------listar-------------------------------------------------------------------------
 def listarProdutos():
     limpar_tela()

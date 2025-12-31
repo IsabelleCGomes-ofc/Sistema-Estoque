@@ -1,6 +1,5 @@
 from utils import limpar_tela, pausa
-from cadastro import cadastrarProduto
-from gerenciamentoProdutos import listarProdutos, movimentarQuantidade, removerProduto
+from gerenciamentoProdutos import *
 
 def exibirMenu():
     limpar_tela()
