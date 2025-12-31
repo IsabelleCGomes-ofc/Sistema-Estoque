@@ -42,6 +42,6 @@ while True:
         input("Finalizando...")
         break
     else:
-        input("A opção que você escolheu não existe! Aperte 'enter' e tente novamente.")
+        input("A opção que você escolheu não existe! tente novamente e escolha um número do menu.")
 
 

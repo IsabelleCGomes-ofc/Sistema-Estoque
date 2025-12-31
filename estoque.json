@@ -1,56 +1,32 @@
 [
     {
         "id": 1,
-        "nome": "computador",
-        "quantidade": 16,
-        "preco": 1200.0
+        "nome": "caneta",
+        "quantidade": 40,
+        "preco": 2.0
     },
     {
         "id": 2,
-        "nome": "estojo",
-        "quantidade": 30,
-        "preco": 17.0
+        "nome": "lapis",
+        "quantidade": 28,
+        "preco": 1.0
     },
     {
-        "id": 5,
-        "nome": "caneta",
-        "quantidade": 20,
-        "preco": 2.0
-    },
-    {
-        "id": 6,
-        "nome": "borracha",
-        "quantidade": 20,
-        "preco": 2.0
-    },
-    {
-        "id": 8,
-        "nome": "giz",
-        "quantidade": 20,
-        "preco": 3.0
-    },
-    {
-        "id": 9,
-        "nome": "papel",
-        "quantidade": 200,
-        "preco": 2.0
-    },
-    {
-        "id": 11,
-        "nome": "tv",
-        "quantidade": 50,
+        "id": 3,
+        "nome": "computador",
+        "quantidade": 59,
         "preco": 2000.0
     },
     {
-        "id": 12,
-        "nome": "guarda-chuva",
-        "quantidade": 20,
-        "preco": 30.0
+        "id": 5,
+        "nome": "estojo",
+        "quantidade": 150,
+        "preco": 20.5
     },
     {
-        "id": 13,
-        "nome": "ap\u00f3stila",
-        "quantidade": 20,
-        "preco": 10.0
+        "id": 6,
+        "nome": "telefone",
+        "quantidade": 98,
+        "preco": 600.0
     }
 ]

@@ -1,0 +1,61 @@
+#validar número e valores vazios
+from data import salvarProduto
+
+#----------------achar produto-----------------------------------------------------
+def encontrarProduto(encontrado, estoque):
+
+    if not encontrado:
+        print("Produto não encontrado :/\n")
+
+#---------------inteiros------------------------------------------------------------
+def validarInteiro():
+
+    while True:
+        try:
+            quantidade = int(input("Digite a quantidade: "))
+
+            if quantidade <= 0:
+                print("O valor digitado precisa ser positivo. Tente novamente!")
+                continue
+
+            return quantidade
+
+
+        except ValueError:
+            print("Quantidade precisa ser número inteiro")
+
+#-------------texto-------------------------------------------------------------------
+def validarTexto():
+    while True:
+        texto = input("Digite o nome: ")
+
+        if texto == "":
+            print("O texto não pode ficar vazio. Tente novamente!")
+            continue
+        return texto
+
+#--------------quebrados--------------------------------------------------------------
+def validarReal():
+
+    while True:
+        try:
+            valor = float(input("Digite o valor: "))
+
+            if valor <= 0:
+                print("O valor digitado precisa ser positivo. Tente novamente!")
+                continue
+
+            return valor
+
+        except ValueError:
+            print("valor precisa ser número")
+
+#-----------------validar ID------------------------------------------------------------
+
+def validarID():
+    while True:
+        try:
+            id = int(input("Digite o id do produto: "))
+            return id
+        except ValueError:
+            print("ID inválido. Tente novamente!")

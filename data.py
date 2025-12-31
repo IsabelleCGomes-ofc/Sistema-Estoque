@@ -17,7 +17,7 @@ def carregarEstoque():
 #-------------------Gerar ID novo----------------------------------------------------
 def gerarId(estoqueLista):
     if len(estoqueLista) == 0: #len=conta quantos elementos tem a variavel, chars, chaves, elementos de lista..
-        idPrimário = 1
+        idPrimário = '1'
         return idPrimário
     else:
         ids = [item["id"] for item in estoqueLista] #obs: item é comando de lista

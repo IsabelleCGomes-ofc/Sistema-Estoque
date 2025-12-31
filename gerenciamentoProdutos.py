@@ -1,56 +1,68 @@
 from utils import limpar_tela
 from data import  carregarEstoque, salvarProduto
+from validacoes import encontrarProduto, validarInteiro, validarID
 
+#--------------------listar-------------------------------------------------------------------------
 def listarProdutos():
     limpar_tela()
     # exibir produtos do estoque
     estoque = carregarEstoque()
+    if len(estoque) == 0 :
+        print("Não há produtos na lista!")
+
     for produto in estoque:
         print(
             f"ID: {produto['id']}| Produto: {produto['nome']} | Quantidade: {produto['quantidade']} | Preço: {produto['preco']:.2f}")
 
 
-
+#-----------------------Movimentar------------------------------------------------------------------
 def movimentarQuantidade(opcao):
 
     limpar_tela()
     estoque = carregarEstoque()
     # receber quantidade de produto que chegou e somar
-    idEscolhido = input("Digite o id do produto: ")
+    idEscolhido = validarID()
     encontrado = False
 
     for produto in estoque:
-        if produto["id"] == int(idEscolhido):
-            qtdNova = int(input("Digite a quantidade de produto movimentao: "))
-            if opcao == "3":
-                produto["quantidade"] += qtdNova
-            elif opcao == "4":
-                produto["quantidade"] -= qtdNova
+        if produto["id"] == idEscolhido:
+            while True:
+                qtdNova = validarInteiro()
+
+                if opcao == "3":
+                    produto["quantidade"] += qtdNova
+                    break
+                elif opcao == "4":
+                    if qtdNova > produto["quantidade"]:
+                        print(
+                            "A quantidade retirada deve ser menor à quantidade estocada."
+                        )
+                        continue  # repete a DIGITAÇÃO da quantidade
+                    else:
+                        produto["quantidade"] -= qtdNova
+                        break
+
             encontrado = True
             break
 
-    if encontrado == False:
-        print("\nProduto não encontrado :/\n")
+    encontrarProduto(encontrado, estoque)
+    if encontrado:
+        salvarProduto(estoque)
 
-    salvarProduto(estoque)
-
+#------------------remover---------------------------------------------------------------------
 def removerProduto():
     limpar_tela()
     estoque = carregarEstoque()
     # receber o id do produto a remover
     # apagar aquele produto da lista
-    idEscolhido = input("Digite o id do produto que deseja remover: ")
+    idEscolhido = validarID()
     encontrado = False
 
     # remove é por valor, ai caberia fazer com idEscolhido sem indice
     for indice, produto in enumerate(estoque):  # pop remove pela posição, não por identificações
-        if produto["id"] == int(idEscolhido):
+        if produto["id"] == idEscolhido:
             estoque.pop(indice)
             encontrado = True
             break
-
     # verificar se esse id existe
-    if encontrado == True:
-        salvarProduto(estoque)
-    else:
-        print("Produto não encontrado :/\n")
+    encontrarProduto(encontrado, estoque)
