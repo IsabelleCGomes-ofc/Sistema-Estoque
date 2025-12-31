@@ -31,7 +31,7 @@ Sistema-Estoque/
 ├── main.py # Menu principal e controle do sistema
 ├── utils.py # Funções utilitárias (limpar tela, pausa)
 ├── data.py # Manipulação do arquivo JSON
-├── cadastro.py # Cadastro de produtos
+├── gerenciamentoProdutos.py # Processos que envolvem os dados do estoque
 
 ## ⚙️ Funcionalidades
 
