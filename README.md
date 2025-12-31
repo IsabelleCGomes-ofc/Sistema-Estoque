@@ -26,6 +26,7 @@ Permitir o controle de produtos em um estoque, possibilitando:
 
 ## 📂 Estrutura do Projeto
 
+```bash
 Sistema-Estoque/
 │
 ├── main.py # Menu principal e controle do sistema
@@ -34,7 +35,7 @@ Sistema-Estoque/
 ├── cadastro.py # Cadastro de produtos
 ├── validacoes.py # Validações de entrada
 ├── gerenciamentoProdutos.py # Ações com produtos já existentes
-
+```
 
 ## ⚙️ Funcionalidades
 
@@ -85,5 +86,6 @@ Esse comportamento segue o padrão utilizado em sistemas reais e bancos de dados
 python main.py
 ├── gerenciamentoProdutos.py # Listar, remover e movimentar produtos
 ├── estoque.json # Arquivo de dados (gerado automaticamente)
+
 └── README.md # Documentação do projeto
 
