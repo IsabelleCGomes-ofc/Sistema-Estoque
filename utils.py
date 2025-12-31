@@ -5,7 +5,7 @@ def limpar_tela():
     try:
         os.system('cls' if os.name == 'nt' else 'clear') #funciona em quase tudo
     except:
-        print("\n" * 100) #pra funcionar no pycharm
+        print("\n" * 3) #pra funcionar no pycharm
 
 #-----------pausar-------------------------------------------------------------------
 def pausa():

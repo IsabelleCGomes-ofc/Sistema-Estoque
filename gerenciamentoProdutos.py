@@ -48,6 +48,7 @@ def movimentarQuantidade(opcao):
     encontrarProduto(encontrado, estoque)
     if encontrado:
         salvarProduto(estoque)
+        print("Produto movimentado com sucesso!")
 
 #------------------remover---------------------------------------------------------------------
 def removerProduto():
@@ -66,3 +67,6 @@ def removerProduto():
             break
     # verificar se esse id existe
     encontrarProduto(encontrado, estoque)
+    if encontrado:
+        salvarProduto(estoque)
+        print("Produto removido com sucesso!")

@@ -20,3 +20,4 @@ def cadastrarProduto():
 
     estoque.append(produto)
     salvarProduto(estoque)
+    print("Produto cadastrado com sucesso!")

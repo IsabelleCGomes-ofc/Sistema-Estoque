@@ -29,7 +29,7 @@ def validarTexto():
     while True:
         texto = input("Digite o nome: ")
 
-        if texto == "":
+        if not texto.strip():
             print("O texto não pode ficar vazio. Tente novamente!")
             continue
         return texto
@@ -48,14 +48,26 @@ def validarReal():
             return valor
 
         except ValueError:
-            print("valor precisa ser número")
+            print("valor precisa ser número real positivo. Tente novamente!")
 
 #-----------------validar ID------------------------------------------------------------
-
 def validarID():
     while True:
+        id = input("Digite o id do produto: ")
+
+        if id.strip() == "":
+            print("o id não pode ficar vazio. Tente novamente!")
+            continue
+
         try:
-            id = int(input("Digite o id do produto: "))
-            return id
+            id = int(id)
+
         except ValueError:
-            print("ID inválido. Tente novamente!")
+            print("ID deve ser número inteiro. Tente novamente!")
+            continue
+
+        if id < 0:
+            print("ID deve ser positivo. Tente novamente!")
+            continue
+
+        return id
